@@ -14,7 +14,12 @@
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 \"npx cypress open\"",
     "test:e2e:run": "cross-env PORT=8811 start-server-and-test dev http://localhost:8811 \"npx cypress run\"",
     "typecheck": "tsc && tsc -p cypress",
-    "validate": "run-p \"test -- --run\" lint typecheck test:e2e:run"
+    "validate": "run-p \"test -- --run\" lint typecheck test:e2e:run",
+    "remotion:studio": "remotion studio",
+    "remotion:render": "remotion render LogoAnimation out/logo-animation.mp4",
+    "remotion:upgrade": "remotion upgrade",
+    "remotion:renderlambda": "remotion lambda render remotion-remix-example LogoAnimation out/logo-animation-lambda-rendered.mp4",
+    "remotion:deploy": "ts-node app/deploy.ts"
   },
   "prettier": {},
   "eslintIgnore": [
@@ -25,20 +30,32 @@
   "dependencies": {
     "@architect/architect": "^10.14.2",
     "@architect/functions": "^7.0.0",
+    "@mantine/core": "^7.1.5",
+    "@mantine/hooks": "^7.1.5",
     "@paralleldrive/cuid2": "^2.2.2",
     "@remix-run/architect": "*",
     "@remix-run/css-bundle": "*",
     "@remix-run/node": "*",
     "@remix-run/react": "*",
+    "@remotion/cli": "4.0.54",
+    "@remotion/lambda": "4.0.54",
+    "@remotion/media-utils": "^4.0.54",
+    "@remotion/player": "4.0.54",
+    "@remotion/renderer": "^4.0.54",
+    "@remotion/zod-types": "^4.0.54",
+    "@vercel/node": "^2.8.1",
     "bcryptjs": "2.4.3",
     "isbot": "^3.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tiny-invariant": "^1.3.1"
+    "remotion": "^4.0.54",
+    "tiny-invariant": "^1.3.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",
     "@remix-run/dev": "*",
+    "@remotion/eslint-config": "^4.0.54",
     "@testing-library/cypress": "^10.0.1",
     "@testing-library/jest-dom": "^6.1.4",
     "@types/architect__functions": "^3.13.10",

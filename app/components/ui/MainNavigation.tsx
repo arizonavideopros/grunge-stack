@@ -13,6 +13,8 @@ import {
 import { Link } from "@remix-run/react";
 import { Fragment, useState } from 'react'
 
+import Logo from '~/components/assets/AZVP_logo.png'
+
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
   { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
@@ -38,7 +40,7 @@ export default function MainNavigation() {
         <div className="flex lg:flex-1">
           <a href="/remotion" className="-m-1.5 p-1.5 text-white">
             <span className="sr-only">Remotion Test</span>
-            <img className="h-8 w-auto" src="/AZVP_logo.png" alt="logo" />
+            <img className="h-8 w-auto" src={ Logo } alt="logo" />
           </a>
         </div>
         <div className="flex lg:hidden">

@@ -8,6 +8,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
 import { LogoAnimationSequence } from './components/logo-animation-sequence';
 import { PersonalizedName } from './components/personalized-name';
 import { PlusSymbol } from './components/plus-symbol';

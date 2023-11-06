@@ -4,6 +4,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
 import { PlusSymbol } from './plus-symbol';
 import { GlowingR } from './remix-logo/glowing-r';
 import { RemixPersonToFusion } from './remix-logo/remix-person-to-fusion';

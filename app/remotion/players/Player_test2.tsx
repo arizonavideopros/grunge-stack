@@ -17,6 +17,9 @@ import {
 	COMPOSITION_WIDTH,
 } from '../../remotion/constants';
 import { LogoAnimation } from '../../remotion/logo-animation';
+
+import { TailwindComp } from '~/remotion/Composition';
+
 import stylesHref from '../../styles/layout.css';
 
 export const links: LinksFunction = () => {
@@ -71,7 +74,7 @@ export const action: ActionFunction = async ({ request }) => {
 };
 
 
-export default function Index() {
+export default function Player_test2() {
 
 	const [personalizedName, setPersonalizedName] = useState('you');
 	const fetcher = useFetcher<RenderResponse>();
@@ -100,7 +103,7 @@ export default function Index() {
 		<div style={container} className="container">
 			<div style={playerContainer}>
 				<Player
-					component={LogoAnimation}
+					component={TailwindComp}
 					inputProps={inputProps}
 					durationInFrames={COMPOSITION_DURATION_IN_FRAMES}
 					fps={COMPOSITION_FPS}

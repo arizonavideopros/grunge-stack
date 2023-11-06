@@ -1,6 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
+import headerImage from "~/components/assets/HeaderImage_small.png";
+import VideoIcon from '~/components/assets/video_icon.svg';
+import CardBasic from "~/components/elements/card_basic";
+import CardIcon from "~/components/elements/card_icon";
+import { HomepagePlayer } from '~/remotion/players/homepage';
 import { useOptionalUser } from "~/utils";
 
 export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
@@ -9,31 +14,31 @@ export default function Index() {
   const user = useOptionalUser();
   return (
 
-    <main className="relative w-full min-h-screen bg-red sm:flex sm:items-center sm:justify-center">
+    <main className="relative w-full min-h-screen bg-red sm:mx-0 sm:flex sm:items-center sm:justify-center">
 
 
 
 
-      <div className="relative sm:pb-16 sm:pt-8">
+      <div className="relative sm:pb-16 sm:pt-0">
         
 
 
 
 
-        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
+        <div className="mx-auto w-full sm:px-0 lg:px-0">
+          <div className="relative shadow-xl sm:overflow-hidden">
             <div className="absolute inset-0">
               <img
                 className="h-full w-full object-cover"
-                src="https://user-images.githubusercontent.com/1500684/158276318-61064670-06c3-43f3-86e3-d624785b8ff7.jpg"
+                src={headerImage}
                 alt="Nirvana playing on stage with Kurt's jagstang guitar"
               />
-              <div className="absolute inset-0 bg-[color:rgba(255,56,56,0.5)] mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[color:rgba(56,56,56,0.5)] mix-blend-multiply" />
             </div>
             <div className="relative px-4 pb-8 pt-16 sm:px-6 sm:pb-14 sm:pt-24 lg:px-8 lg:pb-20 lg:pt-32">
-              <h1 className="text-center text-6xl font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
-                <span className="block uppercase text-red-500 drop-shadow-md">
-                  Grunge Stack
+              <h1 className="text-center text-3xl font-extrabold tracking-tight sm:text-8xl lg:text-5xl">
+                <span className="block uppercase text-white drop-shadow-md">
+                  PERSONALIZED VIDEO WORKFLOWS CREATED FOR YOUR SPECIFIC BUSINESS NEEDS.
                 </span>
               </h1>
               <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
@@ -76,6 +81,36 @@ export default function Index() {
           </div>
         </div>
 
+        <div>
+          player
+        <HomepagePlayer />
+
+        </div>
+
+        <div className="flex flex-wrap">
+                <div className="flex flex-grow w-full p-2">
+                    <div className="w-1/2">
+                      <div className={`flex items-center h-24`}>
+                          <img src={ VideoIcon } alt="Customers love to interact with our videos" className="mr-4 w-10 h-10" />  {/* Updated this line */}
+                          <div>
+                            <h3 className="text-lg font-semibold">Interactive</h3>
+                            <p className="text-sm">Customers can interact with your video, allowing for a more personalized experience and higher engagement.</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div className="w-1/2 p-3 bg-slate-400">
+                            <CardBasic 
+                                imageSrc={ headerImage } 
+                                title="Title" 
+                                description="Description stuff here"
+                                btntext="Demo"
+                                link="/demo"
+                                color="bg-white"
+                            />
+                    </div>
+                </div>                
+            </div>
+
         <section className="pt-36 pb-24 relative">
         <div className="container mx-auto">
 
@@ -90,9 +125,95 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="mx-auto py-5 px-0 bg-gray-100">
+        <h1 className="text-4xl font-bold text-center my-10">Use Cases</h1>
+        <div className="px-6 grid grid-cols-1 md:grid-cols-3 gap-3">
+
+                      <CardBasic 
+                          imageSrc={ headerImage } 
+                          title="Title" 
+                          description="Description stuff here"
+                          btntext="Demo"
+                          link="/demo"
+                          color="bg-white text-black"
+                      />
+
+                      <CardBasic 
+                          imageSrc={ headerImage } 
+                          title="Title" 
+                          description="Description stuff here"
+                          btntext="Demo"
+                          link="/demo"
+                          color="bg-white"
+                      />
+
+                      <CardBasic 
+                          imageSrc={ headerImage } 
+                          title="Title" 
+                          description="Description stuff here"
+                          btntext="Demo"
+                          link="/demo"
+                          color="bg-white"
+                      />
+          
+
+
+
+        </div>
+
+  </div>
+
+
+  <div className="mx-auto p-0">
+        <h1 className="text-4xl font-bold text-center my-10">Why Personalization Matters</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          <CardIcon
+            iconSrc={VideoIcon}
+            title="Personalized Video"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            bgColor="bg-green-500 text-white"
+          />
+          <CardIcon
+            iconSrc={VideoIcon}
+            title="Personalized Landing Pages"
+            description="Engage with live Q&A and polls."
+            bgColor="bg-blue-500 text-white"
+          />
+          <CardIcon
+            iconSrc={VideoIcon}
+            title="Video Production"
+            description="Access recordings anytime, anywhere. Broadcast in real-time to a global audience."
+            bgColor="bg-red-500 text-white"
+          />
+          <CardIcon
+            iconSrc={VideoIcon}
+            title="Consultation"
+            description="Broadcast in real-time to a global audience. Broadcast in real-time to a global audience. Broadcast in real-time to a global audience. Broadcast in real-time to a global audience. Broadcast in real-time to a global audience. Broadcast in real-time to a global audience."
+            bgColor="bg-purple-500 text-white"
+          />
+          <CardIcon
+            iconSrc={VideoIcon}
+            title="Interactive Sessions"
+            description="Engage with live Q&A and polls."
+            bgColor="bg-orange-500 text-white"
+          />
+          <CardIcon
+            iconSrc={VideoIcon}
+            title="On-Demand Content"
+            description="Access recordings anytime, anywhere. Broadcast in real-time to a global audience."
+            bgColor="bg-yellow-500 text-white"
+          />
+        </div>
+
+  </div>
+
+
+
+
+
       <section>
         <div className="flex justify-center items-center relative z-20 translate-y-1/2">
-          <div className="bg-primary text-white rounded-md text-sm font-semibold flex-none shadow cursor-pointer hover:shadow-lg focus:outline-none uppercase px-16 py-3">Stuff goes here</div>
+          <div className="bg-red-500 text-white rounded-md text-sm font-semibold flex-none shadow cursor-pointer hover:shadow-lg focus:outline-none uppercase px-16 py-3">Stuff goes here</div>
         </div>
 
         <div className="flex items-center md:py-80 py-44" style={{ backgroundImage: "url('https://connectingscottsdalenorth.com/wp-content/uploads/2019/12/CSN_Header2-1024x576.jpg')", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}></div>

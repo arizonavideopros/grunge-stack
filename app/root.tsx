@@ -23,6 +23,8 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   return json({ user: await getUser(request) });
 };
 
+
+
 export default function App() {
   return (
     <html lang="en" className="h-full">

@@ -5,6 +5,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
 import type { LogoAnimationProps } from '../constants';
 
 export const PersonalizedName = ({ personalizedName }: LogoAnimationProps) => {

@@ -33,12 +33,12 @@ export default function MainNavigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="bg-gray-800">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 text-white" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/remotion" className="-m-1.5 p-1.5">
+          <a href="/remotion" className="-m-1.5 p-1.5 text-white">
             <span className="sr-only">Remotion Test</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+            <img className="h-8 w-auto" src="/AZVP_logo.png" alt="logo" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -53,7 +53,7 @@ export default function MainNavigation() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-100">
               Services
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
@@ -103,18 +103,18 @@ export default function MainNavigation() {
             </Transition>
           </Popover>
 
-          <a href="/remotion" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/remotion" className="text-sm font-semibold leading-6 text-gray-100">
             Features
           </a>
-          <a href="/remotion" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/remotion" className="text-sm font-semibold leading-6 text-gray-100">
             Marketplace
           </a>
-          <a href="/remotion" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/remotion" className="text-sm font-semibold leading-6 text-gray-100">
             About
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/join" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/join" className="text-sm font-semibold leading-6 text-gray-100">
             LOG IN <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -146,7 +146,7 @@ export default function MainNavigation() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50">
                         Services
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}

@@ -9,9 +9,17 @@ export default function Index() {
   const user = useOptionalUser();
   return (
 
-    <main className="relative min-h-screen bg-red sm:flex sm:items-center sm:justify-center">
+    <main className="relative w-full min-h-screen bg-red sm:flex sm:items-center sm:justify-center">
+
+
+
 
       <div className="relative sm:pb-16 sm:pt-8">
+        
+
+
+
+
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
             <div className="absolute inset-0">
@@ -68,75 +76,68 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
-          <div className="mt-6 flex flex-wrap justify-center gap-8">
-            {[
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157991167-651c8fc5-2f72-4afa-94d8-2520ecbc5ebc.svg",
-                alt: "AWS",
-                href: "https://aws.com",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157991935-26c0d587-b866-49f5-af34-8f04be1c9df2.svg",
-                alt: "DynamoDB",
-                href: "https://aws.amazon.com/dynamodb/",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157990874-31f015c3-2af7-4669-9d61-519e5ecfdea6.svg",
-                alt: "Architect",
-                href: "https://arc.codes",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157764276-a516a239-e377-4a20-b44a-0ac7b65c8c14.svg",
-                alt: "Tailwind",
-                href: "https://tailwindcss.com",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157764454-48ac8c71-a2a9-4b5e-b19c-edef8b8953d6.svg",
-                alt: "Cypress",
-                href: "https://www.cypress.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772386-75444196-0604-4340-af28-53b236faa182.svg",
-                alt: "MSW",
-                href: "https://mswjs.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772447-00fccdce-9d12-46a3-8bb4-fac612cdc949.svg",
-                alt: "Vitest",
-                href: "https://vitest.dev",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772662-92b0dd3a-453f-4d18-b8be-9fa6efde52cf.png",
-                alt: "Testing Library",
-                href: "https://testing-library.com",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772934-ce0a943d-e9d0-40f8-97f3-f464c0811643.svg",
-                alt: "Prettier",
-                href: "https://prettier.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772990-3968ff7c-b551-4c55-a25c-046a32709a8e.svg",
-                alt: "ESLint",
-                href: "https://eslint.org",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157773063-20a0ed64-b9f8-4e0b-9d1e-0b65a3d4a6db.svg",
-                alt: "TypeScript",
-                href: "https://typescriptlang.org",
-              },
-            ].map((img) => (
-              <a
-                key={img.href}
-                href={img.href}
-                className="flex h-16 w-32 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
-              >
-                <img alt={img.alt} src={img.src} className="object-contain" />
-              </a>
-            ))}
+        <section className="pt-36 pb-24 relative">
+        <div className="container mx-auto">
+
+          <div className="text-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-5">
+              We are on a mission to
+              <span className="relative z-0 after:bg-primary/30 after:-z-10 after:absolute md:after:h-6 sm:after:h-5 after:h-4 after:w-full after:bottom-0 after:end-0">revolutionize</span> the web
+            </h1>
+            <p className="text-lg text-gray-500">We are a full-stack web development studio, run by people who are very passionate about making the web more beautiful</p>
           </div>
+
         </div>
+      </section>
+
+      <section>
+        <div className="flex justify-center items-center relative z-20 translate-y-1/2">
+          <div className="bg-primary text-white rounded-md text-sm font-semibold flex-none shadow cursor-pointer hover:shadow-lg focus:outline-none uppercase px-16 py-3">Stuff goes here</div>
+        </div>
+
+        <div className="flex items-center md:py-80 py-44" style={{ backgroundImage: "url('https://connectingscottsdalenorth.com/wp-content/uploads/2019/12/CSN_Header2-1024x576.jpg')", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}></div>
+      </section>
+
+      <section className="lg:py-24 py-16">
+        <div className="container mx-auto" data-aos="fade-up">
+
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
+            <div className="flex flex-col items-center lg:items-start">
+              <div className="border-t-2 border-gray-300 w-1/5 mb-7"></div>
+              <h1 className="text-3xl">About Us</h1>
+            </div>
+
+            <div>
+              <p className="text-sm tracking-wider text-gray-600">
+                Temporibus autem quibusdam et aut as officiis debitis aut rerum necessitatibus saepe eveniet voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus reiciendis.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm tracking-wider text-gray-600">
+                Temporibus autem quibusdam et aut as officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus reiciendis.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
+              <div></div>
+
+              <div className="col-span-2">
+                <p className="text-sm tracking-wider text-gray-600">
+                  Temporibus autem quibusdam et aut as officiis debitis aut rerum necessitatibus saepe eveniet voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus reiciendis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      
+
+
       </div>
     </main>
   );
